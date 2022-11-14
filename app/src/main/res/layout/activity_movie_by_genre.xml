@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.examproject.myapplication.movies.view.MovieByGenreActivity" />
+
+        <variable
+            name="adapterTopMovies"
+            type="com.examproject.myapplication.movies.data.adapter.AdapterMovies" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activities.MovieByGenreActivity">
+
+        <TextView
+            android:id="@+id/tv_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color4"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="genre"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMovies"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/color4"
+            app:adapter="@{adapterTopMovies}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_genre"
+            tools:listitem="@layout/item_movie" />
+
+        <ProgressBar
+            android:id="@+id/main_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerMovies"
+            app:layout_constraintStart_toStartOf="@+id/recyclerMovies"
+            app:layout_constraintTop_toTopOf="@+id/recyclerMovies" />
+
+        <include
+            android:id="@+id/lyError"
+            layout="@layout/ly_error_layout"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

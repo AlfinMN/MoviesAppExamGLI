@@ -6,6 +6,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+/**
+ * Created by Alfin Muhammad Nurdin on 28/11/22.
+ * alfinmuhammadnurdin@gmail.com
+ */
+
 class Connection {
     companion object {
         var okHttpClient: OkHttpClient? = OkHttpClient.Builder()

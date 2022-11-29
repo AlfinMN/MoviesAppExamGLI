@@ -57,7 +57,5 @@
             android:id="@+id/lyError"
             layout="@layout/ly_error_layout"
             />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

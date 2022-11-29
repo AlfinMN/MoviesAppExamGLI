@@ -29,6 +29,7 @@ data class MoviesModel (
     val totalResults: Int? = null
         ){}
 
+
 data class MovieList(@field:SerializedName("overview")
                      val overview: String? = null,
 
@@ -142,3 +143,9 @@ class ProductCompanies(
 class Countries (
     val name: String
         ){}
+
+class ResLatest(
+    val page : Int,
+    val results: List<ResMovieDetail>,
+    val total_results : Int
+){}

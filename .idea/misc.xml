@@ -18,10 +18,15 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_movie_by_genre.xml" value="0.19283599853515626" />
         <entry key="app/src/main/res/layout/activity_movie_detail.xml" value="0.13288288288288289" />
+        <entry key="app/src/main/res/layout/activity_search_movie.xml" value="0.20576019287109376" />
         <entry key="app/src/main/res/layout/item_genre.xml" value="0.23088599310980903" />
         <entry key="app/src/main/res/layout/item_loading.xml" value="0.1927927927927928" />
         <entry key="app/src/main/res/layout/item_movie.xml" value="0.2564705882352941" />
+        <entry key="app/src/main/res/layout/item_poster.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/item_search_movie.xml" value="0.12882882882882882" />
         <entry key="app/src/main/res/layout/ly_error_layout.xml" value="0.1927927927927928" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -2,13 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-        <variable
-            name="model"
-            type="com.examproject.myapplication.movies.data.MovieList" />
-    </data>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,8 +27,6 @@
 
             <ImageView
                 android:id="@+id/movie_poster"
-                app:imageMovie="@{model.backdropPath}"
-                app:progressMovie="@{movieProgress}"
                 android:layout_width="@dimen/_72sdp"
                 android:layout_height="@dimen/_96sdp"
                 tools:ignore="ContentDescription" />
@@ -76,7 +67,6 @@
                 android:layout_marginTop="@dimen/_4sdp"
                 android:maxLines="1"
                 android:textColor="@color/white"
-                android:text="@{model.title}"
                 tools:text="Movie Title" />
 
             <TextView
@@ -89,7 +79,6 @@
                 android:ellipsize="end"
                 android:textColor="@color/color2"
                 android:maxLines="2"
-                android:text="@{model.overview}"
                 tools:text="Nowadays, user engagement is considered one of the most important metrics for the success of your app" />
 
         </LinearLayout>

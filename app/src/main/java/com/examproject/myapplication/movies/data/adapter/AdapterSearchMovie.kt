@@ -1,6 +1,7 @@
 package com.examproject.myapplication.movies.data.adapter
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.examproject.myapplication.databinding.ItemMovieBinding
 import com.examproject.myapplication.databinding.ItemPosterBinding
 import com.examproject.myapplication.databinding.ItemSearchMovieBinding
 import com.examproject.myapplication.movies.data.ResMovieDetail
+import com.examproject.myapplication.movies.view.DetailMovieActivity
 import com.examproject.myapplication.utils.BASE_URL_IMG
 
 
@@ -32,7 +34,7 @@ class AdapterSearchMovie(val listData : List<ResMovieDetail>,val activity: Activ
             binding.movieYear.text = dataMovie.release_date
             binding.movieDesc.text = dataMovie.overview
             val url = BASE_URL_IMG + dataMovie.poster_path
-            Log.e("URL IMAGE",url)
+
             Glide.with(activity)
                 .load(url)
                 .listener(object: RequestListener<Drawable> {
@@ -61,6 +63,11 @@ class AdapterSearchMovie(val listData : List<ResMovieDetail>,val activity: Activ
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .centerCrop()
                 .into(binding.moviePoster)
+            itemView.setOnClickListener {
+                val toDetail= Intent(activity, DetailMovieActivity::class.java)
+                toDetail.putExtra(DetailMovieActivity.EXTRA_ID,dataMovie.id)
+                activity.startActivity(toDetail)
+            }
         }
     }
 

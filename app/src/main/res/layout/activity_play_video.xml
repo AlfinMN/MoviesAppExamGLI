@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".movies.view.PlayVideoActivity"
+    android:background="@color/color3">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/trailer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_play"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="13dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/trailer"
+        app:layout_constraintEnd_toEndOf="@+id/trailer"
+        app:layout_constraintStart_toStartOf="@+id/trailer" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:drawableLeft="@drawable/ic_play"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="@dimen/_10sdp"
+        android:text="View Trailer"
+        android:layout_margin="@dimen/_10sdp"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/color6"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/color1"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

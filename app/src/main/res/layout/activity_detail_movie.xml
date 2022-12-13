@@ -83,6 +83,32 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
+<!--        <com.google.android.youtube.player.YouTubePlayerView-->
+<!--            android:id="@+id/trailer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_200sdp"-->
+<!--            android:layout_margin="@dimen/_10sdp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_overview"/>-->
+
+        <Button
+            android:id="@+id/v_trailer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:drawableLeft="@drawable/ic_play"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="@dimen/_10sdp"
+            android:text="View Trailer"
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            app:backgroundTint="@color/color6"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_overview"
+            app:layout_constraintStart_toStartOf="@+id/tv_overview"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview"
+            app:strokeColor="@color/color1"
+            app:strokeWidth="2dp" />
+
         <ImageView
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"

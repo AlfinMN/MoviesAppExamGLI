@@ -38,6 +38,7 @@ android {
 
 dependencies {
     implementation 'androidx.databinding:databinding-runtime:4.2.2'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 
     // Dagger
     def dagger_version = "2.37"

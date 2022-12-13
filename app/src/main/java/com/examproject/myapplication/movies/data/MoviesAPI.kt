@@ -24,10 +24,15 @@ interface MoviesAPI {
     fun getDetailMovie(@Path("movie_id")movie_id : Int,
                        @Query("api_key") api_key: String,
                        ) :Call<ResMovieDetail>
+
     @GET(LATEST_MOVIE)
     fun getLatestMovie(@Query("api_key") api_key: String):Call<ResLatest>
 
     @GET(SEARCH_MOVIE)
     fun getSearchMovie(@Query("api_key") api_key: String,
                         @Query("query")query: String):Call<ResLatest>
+
+    @GET(VIDEOS)
+    fun getVideos(@Path("movie_id")movie_id : Int,
+                  @Query("api_key") api_key: String):Call<ResVideos>
 }

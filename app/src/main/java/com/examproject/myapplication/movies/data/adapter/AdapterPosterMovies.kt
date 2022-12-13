@@ -1,7 +1,9 @@
 package com.examproject.myapplication.movies.data.adapter
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,11 +18,12 @@ import com.examproject.myapplication.databinding.ItemGenreBinding
 import com.examproject.myapplication.databinding.ItemPosterBinding
 import com.examproject.myapplication.movies.data.MovieList
 import com.examproject.myapplication.movies.data.ResMovieDetail
+import com.examproject.myapplication.movies.view.DetailMovieActivity
 import com.examproject.myapplication.utils.BASE_URL_IMG
 
 
 /**
- * Created by Alfin Muhammad Nurdin on 28/11/22.
+ * Created by Alfin Muhammad Nurdin on 12/12/22.
  * alfinmuhammadnurdin@gmail.com
  */
 class AdapterPosterMovies (val listData : List<ResMovieDetail>, val activity: Activity):RecyclerView.Adapter<AdapterPosterMovies.PosterVH>(){
@@ -54,6 +57,12 @@ class AdapterPosterMovies (val listData : List<ResMovieDetail>, val activity: Ac
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .centerCrop()
                 .into(binding.imgPoster)
+
+            itemView.setOnClickListener {
+                val toDetail= Intent(activity, DetailMovieActivity::class.java)
+                toDetail.putExtra(DetailMovieActivity.EXTRA_ID,dataPoster.id)
+                activity.startActivity(toDetail)
+            }
         }
     }
 

@@ -23,7 +23,7 @@ import com.examproject.myapplication.utils.BASE_URL_IMG
 
 
 /**
- * Created by Alfin Muhammad Nurdin on 29/11/22.
+ * Created by Alfin Muhammad Nurdin on 12/12/22.
  * alfinmuhammadnurdin@gmail.com
  */
 class AdapterSearchMovie(val listData : List<ResMovieDetail>,val activity: Activity):RecyclerView.Adapter<AdapterSearchMovie.SearchVH>() {

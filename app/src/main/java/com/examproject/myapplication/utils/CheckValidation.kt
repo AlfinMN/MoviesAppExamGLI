@@ -6,6 +6,11 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import androidx.annotation.RequiresPermission
 
+/**
+ * Created by Alfin Muhammad Nurdin on 12/12/22.
+ * alfinmuhammadnurdin@gmail.com
+ */
+
 class CheckValidation {
 
     companion object{

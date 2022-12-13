@@ -70,7 +70,6 @@ class MovieByGenreActivity : AppCompatActivity() {
 
         moviesViewModel.topMoviesNextPageResponse.observe(this) {
             if (it is MoviesModel) {
-
                 val results = fetchResults(it) as MutableList<MovieList>
                 mAdapter.removeLoadingFooter()
                 isLoading = false

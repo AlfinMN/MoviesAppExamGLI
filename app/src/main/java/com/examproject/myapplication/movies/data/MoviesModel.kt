@@ -149,3 +149,16 @@ class ResLatest(
     val results: List<ResMovieDetail>,
     val total_results : Int
 ){}
+
+class ResVideos(
+    val id: Int,
+    val results: ArrayList<MoviesVideo>
+){}
+
+class MoviesVideo(
+    val name: String,
+    val key : String,
+    val site : String,
+    val size : Int,
+    val type : String ,
+){}

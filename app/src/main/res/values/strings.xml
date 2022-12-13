@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MoviesApp</string>
+    <string name="app_name">MoviesAppByGLI</string>
     <string name="username">Username</string>
     <string name="error_msg_no_internet">Error Message</string>
     <string name="tap_to_reload">Tap To Reload</string>

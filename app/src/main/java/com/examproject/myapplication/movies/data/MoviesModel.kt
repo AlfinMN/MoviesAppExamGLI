@@ -131,6 +131,7 @@ class ResMovieDetail(
     val production_countries : ArrayList<Countries>,
     val release_date : String,
     val runtime : Int ,
+    val vote_average : Float
 ){}
 
 class ProductCompanies(
@@ -161,4 +162,22 @@ class MoviesVideo(
     val site : String,
     val size : Int,
     val type : String ,
+){}
+
+class ResReview(
+    val id: Int,
+    val results: ArrayList<MoviesReview>
+){}
+
+class MoviesReview(
+    val author : String ,
+    val author_details : AuthorDetails,
+    val content : String,
+){}
+
+class AuthorDetails(
+    val name: String,
+    val username : String,
+    val avatar_path : String ,
+    val rating : Float
 ){}

@@ -11,6 +11,7 @@ class MoviesViewModel @Inject constructor( val moviesRepository: MoviesRepositor
     val resMovieDetail = moviesRepository.resDetailMovie
     val resLatest = moviesRepository.resLatest
     val resVideos = moviesRepository.resVideos
+    val resReview = moviesRepository.resReview
     private var _topMoviesFirstPageResponse = MutableLiveData<Any>()
     private var _topMoviesNextPageResponse = MutableLiveData<Any>()
 
@@ -45,6 +46,10 @@ class MoviesViewModel @Inject constructor( val moviesRepository: MoviesRepositor
 
     fun getVideos(movie_id :Int,context: Context){
         moviesRepository.getVideos(API_KEY,movie_id, context)
+    }
+
+    fun getReview(movie_id: Int,context: Context){
+        moviesRepository.getReview(API_KEY,movie_id, context)
     }
 
 }

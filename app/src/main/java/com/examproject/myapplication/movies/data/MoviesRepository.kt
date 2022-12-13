@@ -16,6 +16,7 @@ class MoviesRepository @Inject constructor(val moviesAPI: MoviesAPI){
     val resMovies = MutableLiveData<MoviesModel>()
     val resVideos = MutableLiveData<MoviesVideo>()
     val resLatest = MutableLiveData<ResLatest>()
+    val resReview = MutableLiveData<ResReview>()
 
     fun getGenre(api_key : String,context: Context){
         moviesAPI.getGenre(api_key).enqueue(object : Callback<ResGenre>{
@@ -163,6 +164,28 @@ class MoviesRepository @Inject constructor(val moviesAPI: MoviesAPI){
             }
 
             override fun onFailure(call: Call<ResVideos>, t: Throwable) {
+                t.printStackTrace()
+                Toast.makeText(context,"Connection Failed: "+t.localizedMessage, Toast.LENGTH_SHORT).show()
+            }
+
+        })
+    }
+
+    fun getReview(api_key: String,movie_id: Int,context: Context){
+        moviesAPI.getReviews(movie_id, api_key).enqueue(object :Callback<ResReview>{
+            override fun onResponse(call: Call<ResReview>, response: Response<ResReview>) {
+                if (response.isSuccessful){
+                    try {
+                        resReview.value = response.body()
+                    }catch (e:Exception){
+                        Toast.makeText(context,"Request Failed: "+response.message(), Toast.LENGTH_SHORT).show()
+                    }
+                }else{
+                    Toast.makeText(context,"Request Failed: "+response.message(), Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<ResReview>, t: Throwable) {
                 t.printStackTrace()
                 Toast.makeText(context,"Connection Failed: "+t.localizedMessage, Toast.LENGTH_SHORT).show()
             }

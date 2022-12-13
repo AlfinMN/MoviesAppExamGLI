@@ -35,4 +35,8 @@ interface MoviesAPI {
     @GET(VIDEOS)
     fun getVideos(@Path("movie_id")movie_id : Int,
                   @Query("api_key") api_key: String):Call<ResVideos>
+
+    @GET(REVIEWS)
+    fun getReviews(@Path("movie_id")movie_id : Int,
+                   @Query("api_key") api_key: String) :Call<ResReview>
 }
